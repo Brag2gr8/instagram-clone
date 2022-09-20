@@ -1,0 +1,101 @@
+html, body {
+    padding: 0;
+    width:375px;
+    font-family: "source sans pro" sans-serif;
+    margin: 0 auto;
+    
+}
+
+/* 
+------------------------------
+SECTIONS & DIVS
+------------------------------
+*/
+ 
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #C6C6C6;
+    padding: 15px 8px;
+    margin-bottom: 10px;
+    height: 67px;
+    align-items: center;
+}
+
+section {
+    margin-top: 50px;
+    
+}
+
+.post-header {
+    display: flex;
+    height: 34px;
+    justify-content: start;
+    align-items: center;
+    margin: 0 0 5px 10px;
+    
+}
+
+.icon-box {
+    display: flex;
+    justify-content: start;
+    margin: 20px 0 0 10px;
+}
+
+/* 
+------------------------------
+TYPOGRAPHY
+------------------------------
+*/
+ 
+p {
+    margin: 0 10px;
+    font-size: 13px;   
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.dull {
+    margin-top: 5px;
+    color: #758a85;
+}
+
+.small-text {
+    font-size: 10px;
+}
+
+/* 
+------------------------------
+OTHERS
+------------------------------
+ */
+
+.o-logo {
+    width: 127px;
+}
+
+.avatar {
+    height: 34px;
+    border-radius: 50%;
+}
+
+.profile-pics {
+    height: 34px;
+    border-radius: 50%;
+}
+
+.post {
+    width: 375px;
+    height: 375px;
+}
+
+.icon {
+    width: 23px;
+    padding: 0 10px 0 0;
+}
+
+.likes {
+    margin: 12px 10px;
+}
