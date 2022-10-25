@@ -1,9 +1,11 @@
 import { posts } from "./data.js";
 
 const root = document.getElementById('root');
+let red = ''
 
 const render = () => {
     let page = ``;
+    
 
     for ( let post of posts ) {
         page += `
@@ -24,7 +26,7 @@ const render = () => {
                     alt=${post.name} 
                     data-img=${post.uuid} />
                 <div class="icon-box">
-                    <i class="fa-regular fa-heart" data-heart=${post.uuid}></i>
+                    <i class="fa-regular fa-heart ${red}" data-heart=${post.uuid}></i>
                     <i class="fa-regular fa-paper-plane"></i>
                     <i class="fa-regular fa-comment"></i>
                 </div>
@@ -62,8 +64,10 @@ function handleLike(uuid) {
     
     if(clickedPost.isLiked) {
         clickedPost.likes--;
+        red = '';
     } else {
         clickedPost.likes++;
+        red = 'liked fa-solid';
     };
     
     clickedPost.isLiked = !clickedPost.isLiked;
