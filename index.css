@@ -99,3 +99,8 @@ i {
 .likes {
     margin: 12px 10px;
 }
+
+.liked {
+    color: red;
+    font-weight: 900;
+}
