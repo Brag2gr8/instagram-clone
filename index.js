@@ -1,13 +1,16 @@
 import { posts } from "./data.js";
 
-const root = document.getElementById('root');
-let red = ''
-
-const render = () => {
+const process = () => {
     let page = ``;
-    
 
-    for ( let post of posts ) {
+    posts.forEach((post)=> {
+    
+        let red = ''
+        
+        if (post.isLiked) {
+        red = 'liked fa-solid'
+        }
+        
         page += `
             <section>
                 <div class="post-header">
@@ -37,9 +40,13 @@ const render = () => {
                 <p class="small-text dull"> ${post.lastSeen} hours ago</p>
             </section>`
             
-    }
+    })
 
-    root.innerHTML = page;
+    return page;
+}
+
+const render = () => {
+    document.getElementById('root').innerHTML = process();
 }
 
 render();
@@ -58,16 +65,16 @@ document.addEventListener("dblclick", (e) => {
 })
 
 function handleLike(uuid) {
+    
     const clickedPost = posts.filter((post) => {
         return uuid === post.uuid;
     })[0]
     
     if(clickedPost.isLiked) {
         clickedPost.likes--;
-        red = '';
+        
     } else {
         clickedPost.likes++;
-        red = 'liked fa-solid';
     };
     
     clickedPost.isLiked = !clickedPost.isLiked;
