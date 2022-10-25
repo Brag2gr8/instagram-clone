@@ -76,6 +76,11 @@ OTHERS
     width: 127px;
 }
 
+i {
+    font-size: 20px;
+    padding: 0 10px 0 0;
+}
+
 .avatar {
     height: 34px;
     border-radius: 50%;
@@ -89,11 +94,6 @@ OTHERS
 .post {
     width: 375px;
     height: 375px;
-}
-
-.icon {
-    width: 23px;
-    padding: 0 10px 0 0;
 }
 
 .likes {
