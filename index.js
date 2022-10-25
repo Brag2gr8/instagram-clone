@@ -1,6 +1,6 @@
 import { posts } from "./data.js";
 
-const process = () => {
+const render = () => {
     let page = ``;
 
     posts.forEach((post)=> {
@@ -42,12 +42,9 @@ const process = () => {
             
     })
 
-    return page;
+    document.getElementById('root').innerHTML = page;
 }
 
-const render = () => {
-    document.getElementById('root').innerHTML = process();
-}
 
 render();
 
